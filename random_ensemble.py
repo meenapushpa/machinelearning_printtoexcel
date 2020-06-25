@@ -60,7 +60,7 @@ print('[INFO] RandomForest Recall: %f' % recall)
 f1 = f1_score(y_test, yhat_probs, labels=labels,pos_label=1,average='micro')
 print('[INFO] RandomForest F1 score: %f' % f1)
 # printing the MultinomialNB predicted category to 'test_predict.xlsx' for test sets
-dfF = pd.DataFrame({'NB_Predict':test_predict})
+dfF = pd.DataFrame({'ensemble_Predict':test_predict})
 dfF = dfF.fillna(1)
 dfF = dfF.astype(int)
 dfF.replace({0:'affection', 1:'exercise', 2:'bonding', 3:'leisure', 4:'achievement' , 5:'enjoy_the_moment', 6:'nature'}, inplace=True)
