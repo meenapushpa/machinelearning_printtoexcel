@@ -71,6 +71,8 @@ df1=pd.read_excel('test_set.xlsx')
 df2=pd.read_excel('test_predict.xlsx')
 False_data = pd.DataFrame()
 False_data=pd.concat([df1,df2],axis=1)
+False_data.sort_values(["hmid", "cleaned_hm" ,"ensemble_Predict"], axis=0,
+                 ascending=True, inplace=True)
 False_data.to_excel("test_consolidate_random_ensemble.xlsx",index=False)
 
 print(" [SUCCESS] Random Ensemble final data stored in test_consolidate_random_ensemble.xlsx! ")
