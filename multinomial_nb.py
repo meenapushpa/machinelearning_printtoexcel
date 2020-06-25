@@ -59,15 +59,15 @@ accuracy = accuracy_score(y_test, yhat_probs)
 print('[INFO] Naive Bayes Accuracy: %f' % accuracy)
 
 # precision tp / (tp + fp)
-precision = precision_score(y_test, yhat_probs, labels=labels,pos_label=1,average='macro')
+precision = precision_score(y_test, yhat_probs, labels=labels,pos_label=1,average='micro')
 print('[INFO] Naive Bayes Precision: %f' % precision)
 
 # recall: tp / (tp + fn)
-recall = recall_score(y_test, yhat_probs, labels=labels,pos_label=1,average='macro')
+recall = recall_score(y_test, yhat_probs, labels=labels,pos_label=1,average='micro')
 print('[INFO] Naive Bayes Recall: %f' % recall)
 
 # f1: 2 tp / (2 tp + fp + fn)
-f1 = f1_score(y_test, yhat_probs, labels=labels,pos_label=1,average='macro')
+f1 = f1_score(y_test, yhat_probs, labels=labels,pos_label=1,average='micro')
 print('[INFO] Naive Bayes F1 score: %f' % f1)
 
 # printing the MultinomialNB predicted category to 'test_predict.xlsx' for test sets
