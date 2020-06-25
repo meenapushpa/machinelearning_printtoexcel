@@ -26,7 +26,7 @@ x_train, x_test, y_train, y_test = train_test_split(train.cleaned_hm, labels, te
 x1_train, x1_test, y1_train, y1_test  = train_test_split(train.hmid, labels, test_size=0.20,random_state=1)
 
 # print the hmid,cleaned_hm values for test sets in excel files
-dftest=pd.DataFrame({'hm_id': x1_test,'cleaned_hm':x_test})
+dftest=pd.DataFrame({'hmid': x1_test,'cleaned_hm':x_test})
 dftest.to_excel("test_set.xlsx",sheet_name='sheet1',index=False)
 
 #1000 Since our theme is a thousand words
