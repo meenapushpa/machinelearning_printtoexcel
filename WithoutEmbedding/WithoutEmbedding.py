@@ -81,7 +81,7 @@ model.add(Dropout(0.7))
 model.add(Dense(7, activation='sigmoid'))  # 7 targets, each done as a logistic
 
 # compile the model
-model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuray',keras_metrics.precision(), keras_metrics.recall(), keras_metrics.f1_score()])
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy',keras_metrics.precision(), keras_metrics.recall(), keras_metrics.f1_score()])
 
 
 #print(model.summary())
