@@ -95,7 +95,7 @@ callbacks_list = [checkpoint,early] #early
 model.fit(X_train, y_train, batch_size=64, epochs=5, validation_split=0.2, callbacks=callbacks_list, verbose=1)
 
 model.load_weights(file_path)
-loss, accuracy, precison, recall, f1  = model.evaluate(X_val, y_val, verbose=1)
+loss, accuracy, precision, recall, f1  = model.evaluate(X_val, y_val, verbose=1)
 
 sequentialpredict = model.predict(X_val, batch_size=64, verbose=1)
 classes = np.argmax(sequentialpredict, axis = 1)
